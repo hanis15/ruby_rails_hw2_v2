@@ -96,4 +96,6 @@ Rails.application.configure do
     :sender_address => %{"notifier" <notifier@rubyHW2.com>},
     :exception_recipients => %w{hanakjarek@gmail.com}
   }
+  config.assets.precompile += %w( scaffolds.css )
+  config.assets.precompile += %w( bootstrap_and_overrides.css )
 end

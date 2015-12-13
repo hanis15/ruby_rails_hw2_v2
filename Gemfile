@@ -21,6 +21,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'cancancan', '~> 1.10'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

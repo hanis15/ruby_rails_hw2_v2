@@ -17,6 +17,10 @@ end
 gem 'pg'
 gem 'puma'
 gem 'slim-rails'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'devise'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

@@ -1,0 +1,45 @@
+p#notice = notice
+
+table
+  tbody
+    tr
+      td.short 
+        strong Author:
+      td.long = @post.author
+    tr
+      td.short 
+        strong Title:
+      td.long = @post.title
+    tr
+      td.short 
+        strong Content:
+      td.long = @post.content
+
+h3 Comments
+- @post.comments.each do |comment|
+  p 
+    = comment.created_at.to_s(:short) 
+    |  napsal 
+    strong  = comment.commenter 
+    | : 
+    q = comment.body 
+    |  
+    = link_to 'Delete', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete
+
+hr
+
+h3 New comment
+= form_for([@post, @post.comments.build]) do |f|
+  div.field
+    = f.label :commenter, "Author: #{current_user.email}"
+    br
+    = f.hidden_field :commenter, :value => current_user.email
+  div.field
+    = f.label :body
+    br
+    = f.text_area :body
+  div.actions
+    = f.submit
+= link_to 'Edit', edit_post_path(@post)
+'|
+= link_to 'Back', posts_path

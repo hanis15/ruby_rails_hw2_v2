@@ -71,6 +71,18 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+  config.action_mailer.smtp_settings = {
+    address: "smtp.mailgun.org",
+    port: 587,
+    user_name: "postmaster@sandboxf5b98531d4d04b1881d33b2cc5678171.mailgun.org",
+    password: "13fc4ef0303bceb0d9a27779034c8737"
+    }
+  config.action_mailer.default_url_options = { host: 'floating-forest-6859.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = false
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 

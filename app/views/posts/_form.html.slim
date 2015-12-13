@@ -1,0 +1,30 @@
+= form_for @post do |f|
+  - if @post.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+      ul
+        - @post.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    - if user_signed_in?
+      div.short
+        = f.label :author, "Author: #{current_user.email}"
+      div.long
+        = f.hidden_field :author, :value => current_user.email
+    - else
+      div.short
+        = f.label :author
+      div.long
+        = f.text_field :author
+  .field
+    div.short
+      = f.label :title
+    div.long
+      = f.text_field :title, :size => 40
+  .field
+    div.short
+      = f.label :content
+    div.long
+      = f.text_area :content, :row => 6, :cols => 100
+  .actions = f.submit

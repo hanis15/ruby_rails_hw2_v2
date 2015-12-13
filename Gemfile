@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'exception_notification'
 group :development, :test do
   gem 'byebug'
 end
@@ -22,6 +23,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
+gem 'activeadmin', github: 'gregbell/active_admin'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

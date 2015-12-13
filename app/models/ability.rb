@@ -4,9 +4,12 @@ class Ability
   def initialize(user)
     if user.nil?
         can :read, Post
+        can :read, Comment
     else
         can [:read, :create], Post
+        can [:read, :create], Comment
         can [:update, :destroy], Post, :author => user.email
+        can [:update, :destroy], Comment, :commenter => user.email
     end
     # The first argument to `can` is the action you are giving the user
     # permission to do.

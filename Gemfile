@@ -26,6 +26,7 @@ gem 'cancancan', '~> 1.10'
 gem 'activeadmin', github: 'gregbell/active_admin'
 group :development do
   gem 'better_errors'
+  gem 'letter_opener'
   gem 'quiet_assets'
   gem 'rails_layout'
 end

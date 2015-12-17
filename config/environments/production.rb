@@ -72,10 +72,10 @@ Rails.application.configure do
   config.active_support.deprecation = :notify
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.mailgun.org",
+    address: "in-v3.mailjet.com",
     port: 587,
-    user_name: "postmaster@sandboxf5b98531d4d04b1881d33b2cc5678171.mailgun.org",
-    password: "13fc4ef0303bceb0d9a27779034c8737"
+    user_name: "ad0063ba8068a0ba5dd7f6216182745c",
+    password: "5530b57236c338105662c3a6520a97e0"
     }
   config.action_mailer.default_url_options = { host: 'floating-forest-6859.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp

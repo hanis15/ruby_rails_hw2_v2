@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :comments
   end
   root to: 'posts#index'
+  get 'users/show'
+  get 'users/edit_avatar'
 end

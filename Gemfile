@@ -24,6 +24,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 group :development do
   gem 'better_errors'
   gem 'letter_opener'

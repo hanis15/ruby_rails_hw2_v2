@@ -54,8 +54,18 @@ production:
   adapter:  postgresql
   host:     localhost
   encoding: unicode
-  database: rubyhw2369513
+  database: ruby_rails_hw2_v2_production
   pool:     5
-  username: adminbihxjft
-  password: kb9eNzMDrz7Z
+  username: ruby_rails_hw2_v2
+  password:
   template: template0
+
+#production:
+#  adapter:  postgresql
+#  host:     localhost
+#  encoding: unicode
+#  database: rubyhw2369513
+#  pool:     5
+#  username: adminbihxjft
+#  password: kb9eNzMDrz7Z
+#  template: template0
